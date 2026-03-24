@@ -3,6 +3,9 @@
 Jutis is a browser extension wallet foundation designed for two built-in networks:
 
 - Canton Network
+
+
+
 [![ff}](https://i.hizliresim.com/jup9qoi.png)](https://hizliresim.com/jup9qoi)
 
 This repository is intentionally product-architecture-first. It does not pretend that Canton behaves like EVM, and it does not hide missing protocol infrastructure behind fake success flows.

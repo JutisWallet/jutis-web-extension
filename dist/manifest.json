@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Jutis Wallet",
+  "version": "0.1.0",
+  "description": "A protocol-aware extension wallet for Canton.",
+  "action": {
+    "default_title": "Jutis",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "permissions": ["alarms", "clipboardWrite", "storage"],
+  "host_permissions": []
+}

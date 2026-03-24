@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-main": "#1c1f26",
+                        "card-bg": "#242933",
+                        "text-primary": "#e7e9ee",
+                        "text-secondary": "#9aa1ac",
+                        "accent": "#dce87a",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "system-ui"],
+                        "display": ["Plus Jakarta Sans", "Inter"]
+                    },
+                    borderRadius: {
+                        "2xl": "1.25rem",
+                        "3xl": "1.75rem",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-bg-main text-text-primary antialiased selection:bg-accent selection:text-bg-main;
+            }
+        }
+        .apple-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .nav-active {
+            @apply text-accent;
+        }.glass-header {
+            background: rgba(28, 31, 38, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen">
+<div class="w-[360px] h-[640px] bg-bg-main shadow-2xl flex flex-col relative overflow-hidden border border-white/5">
+<header class="pt-6 px-6 pb-2 flex items-center justify-between z-20 glass-header sticky top-0">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-5 bg-accent rounded-full"></div>
+<h2 class="text-xs font-bold tracking-tight font-display text-text-primary uppercase italic">Carbon</h2>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-card-bg rounded-full border border-white/5 text-[10px] font-medium text-text-secondary">
+<span class="w-1 h-1 rounded-full bg-accent"></span>
+                    Canton
+                </div>
+</div>
+</header>
+<main class="flex-1 flex flex-col overflow-y-auto hide-scrollbar pb-24">
+<div class="px-6 pt-4 animate-in fade-in duration-300" id="portfolio-screen">
+<div class="flex justify-center mb-6">
+<div class="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full cursor-pointer hover:bg-white/10 transition-colors">
+<span class="text-[10px] font-mono text-text-secondary">0x34A...8F2D</span>
+<span class="material-symbols-outlined text-[12px] text-text-secondary">content_copy</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center text-center mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-medium text-text-secondary">$</span>
+<h1 class="text-5xl font-semibold tracking-tight font-display">3,482.20</h1>
+</div>
+<div class="mt-2 text-[12px] font-bold text-accent bg-accent/10 px-2 py-0.5 rounded-full">
+                        +2.4% <span class="text-[10px] font-normal opacity-80 ml-0.5">today</span>
+</div>
+</div>
+<div class="mb-10">
+<div class="bg-card-bg p-1.5 rounded-[2rem] border border-white/10 apple-shadow">
+<button class="w-full bg-text-primary text-bg-main h-14 rounded-[1.6rem] flex items-center justify-center gap-3 font-semibold transition-all hover:opacity-95 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+                            Quick Action
+                        </button>
+<div class="flex justify-between px-2 py-2 mt-1">
+<button class="flex flex-col items-center gap-1 w-1/3 py-2 hover:bg-white/5 rounded-2xl">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">north_east</span>
+<span class="text-[9px] uppercase tracking-widest font-bold text-text-secondary">Send</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-1/3 py-2 hover:bg-white/5 rounded-2xl">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">south_west</span>
+<span class="text-[9px] uppercase tracking-widest font-bold text-text-secondary">Receive</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-1/3 py-2 hover:bg-white/5 rounded-2xl">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">swap_horiz</span>
+<span class="text-[9px] uppercase tracking-widest font-bold text-text-secondary">Swap</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mb-10">
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-[10px] font-bold text-text-secondary uppercase tracking-[0.2em]">Assets</h3>
+<span class="text-[10px] text-accent/80 font-medium">View All</span>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-6 px-6">
+<div class="flex-shrink-0 flex items-center gap-3 px-4 py-3 bg-card-bg rounded-2xl border border-white/5 min-w-[130px] active:scale-95 transition-transform cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[18px]">hexagon</span>
+</div>
+<div>
+<p class="text-[11px] font-bold text-text-primary leading-none mb-1">CTN</p>
+<p class="text-[10px] text-text-secondary font-mono">1,240.0</p>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-3 px-4 py-3 bg-card-bg rounded-2xl border border-white/5 min-w-[130px] active:scale-95 transition-transform cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-text-secondary">
+<span class="material-symbols-outlined text-[18px]">diamond</span>
+</div>
+<div>
+<p class="text-[11px] font-bold text-text-primary leading-none mb-1">ETH</p>
+<p class="text-[10px] text-text-secondary font-mono">0.45</p>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-3 px-4 py-3 bg-card-bg rounded-2xl border border-white/5 min-w-[130px] active:scale-95 transition-transform cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-blue-400/10 flex items-center justify-center text-blue-400">
+<span class="material-symbols-outlined text-[18px]">monetization_on</span>
+</div>
+<div>
+<p class="text-[11px] font-bold text-text-primary leading-none mb-1">USDC</p>
+<p class="text-[10px] text-text-secondary font-mono">500.0</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-[10px] font-bold text-text-secondary uppercase tracking-[0.2em]">Recent</h3>
+<button class="text-[10px] text-text-secondary hover:text-text-primary">History</button>
+</div>
+<div class="space-y-4 px-1">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary/50 text-sm">north_east</span>
+<div>
+<p class="text-[11px] font-medium text-text-primary leading-tight">Sent 50 USDC</p>
+<p class="text-[9px] text-text-secondary/60">Success • 2h ago</p>
+</div>
+</div>
+<span class="text-[11px] font-mono text-text-secondary">-$50.00</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary/50 text-sm">south_west</span>
+<div>
+<p class="text-[11px] font-medium text-text-primary leading-tight">Received 100 CTN</p>
+<p class="text-[9px] text-text-secondary/60">Success • 5h ago</p>
+</div>
+</div>
+<span class="text-[11px] font-mono text-accent">+$142.10</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary/50 text-sm">app_registration</span>
+<div>
+<p class="text-[11px] font-medium text-text-primary leading-tight">Contract Interact</p>
+<p class="text-[9px] text-text-secondary/60">Success • 1d ago</p>
+</div>
+</div>
+<span class="text-[11px] font-mono text-text-secondary">0.001 ETH</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="absolute bottom-0 left-0 right-0 h-20 glass-header border-t border-white/5 px-6 flex items-center justify-between z-30">
+<button class="flex flex-col items-center gap-1 group">
+<div class="p-2 rounded-xl group-active:scale-90 transition-all text-accent">
+<span class="material-symbols-outlined fill-1">account_balance_wallet</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-accent">Portfolio</span>
+</button>
+<button class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity">
+<div class="p-2 rounded-xl group-active:scale-90 transition-all text-text-secondary">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-text-secondary">Activity</span>
+</button>
+<button class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity">
+<div class="p-2 rounded-xl group-active:scale-90 transition-all text-text-secondary">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-text-secondary">Discover</span>
+</button>
+<button class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity">
+<div class="p-2 rounded-xl group-active:scale-90 transition-all text-text-secondary">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-text-secondary">Settings</span>
+</button>
+</nav>
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-20 h-1 bg-white/10 rounded-full z-40 pointer-events-none"></div>
+</div>
+
+</body></html>

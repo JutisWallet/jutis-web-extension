@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-main": "#1a1d23",
+                        "card-bg": "#232730",
+                        "border-color": "#2e323c",
+                        "text-primary": "#e6e8ec",
+                        "text-secondary": "#9aa1ac",
+                        "accent": "#dce87a",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "system-ui"],
+                        "display": ["Plus Jakarta Sans", "Inter"]
+                    },
+                    borderRadius: {
+                        "2xl": "1.25rem",
+                        "3xl": "1.75rem",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-bg-main text-text-primary antialiased selection:bg-accent selection:text-bg-main;
+            }
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(26, 29, 35, 0.8);
+        }
+        .glass-card {
+            background: linear-gradient(135deg, rgba(35, 39, 48, 1) 0%, rgba(35, 39, 48, 0.8) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen p-4">
+<div class="w-[360px] h-[640px] bg-bg-main shadow-2xl flex flex-col relative overflow-hidden border border-border-color rounded-[32px]">
+<header class="pt-6 px-6 pb-4 flex items-center justify-between z-20 shrink-0">
+<div class="flex items-center gap-2">
+<div class="w-2 h-6 bg-accent rounded-full"></div>
+<h2 class="text-sm font-bold tracking-tight font-display text-text-primary uppercase italic">Carbon</h2>
+</div>
+<div class="flex items-center gap-2">
+<div class="px-2 py-1 bg-white/5 rounded-full flex items-center gap-1.5 border border-white/5">
+<span class="w-1 h-1 rounded-full bg-accent animate-pulse"></span>
+<span class="text-[10px] font-mono text-text-secondary">0x34A...8F2D</span>
+</div>
+<button class="p-1.5 text-text-secondary hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto hide-scrollbar px-6 pb-24">
+<div class="mb-6 mt-2">
+<h1 class="text-xl font-bold font-display leading-tight mb-1">Canton Navigator</h1>
+<p class="text-xs text-text-secondary">Explore and connect to trusted ecosystem dApps</p>
+</div>
+<div class="space-y-4">
+<div class="glass-card p-5 rounded-3xl relative overflow-hidden group">
+<div class="absolute top-4 right-4 bg-accent/10 text-accent px-2 py-0.5 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] fill-1">verified</span>
+<span class="text-[9px] font-bold uppercase tracking-wider">Verified</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center border border-accent/20">
+<span class="material-symbols-outlined text-accent text-3xl">account_balance</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-text-primary">Canton Trade</h3>
+<p class="text-[11px] text-text-secondary mt-0.5">Primary decentralized exchange</p>
+</div>
+</div>
+<button class="w-full bg-accent text-bg-main py-3 rounded-2xl font-bold text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                        Connect App
+                        <span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+<div class="glass-card p-5 rounded-3xl relative overflow-hidden group">
+<div class="absolute top-4 right-4 bg-accent/10 text-accent px-2 py-0.5 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] fill-1">verified</span>
+<span class="text-[9px] font-bold uppercase tracking-wider">Verified</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400/20 to-blue-400/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-blue-400 text-3xl">diamond</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-text-primary">Global Ledger</h3>
+<p class="text-[11px] text-text-secondary mt-0.5">Asset tokenization &amp; custody</p>
+</div>
+</div>
+<button class="w-full bg-white text-bg-main py-3 rounded-2xl font-bold text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                        Connect App
+                        <span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+<div class="glass-card p-5 rounded-3xl relative overflow-hidden group">
+<div class="absolute top-4 right-4 bg-accent/10 text-accent px-2 py-0.5 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] fill-1">verified</span>
+<span class="text-[9px] font-bold uppercase tracking-wider">Verified</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-400/20 to-purple-400/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-purple-400 text-3xl">shield_with_heart</span>
+</div>
+<div>
+<h3 class="text-base font-bold text-text-primary">Canton Insure</h3>
+<p class="text-[11px] text-text-secondary mt-0.5">Protocol protection services</p>
+</div>
+</div>
+<button class="w-full bg-white text-bg-main py-3 rounded-2xl font-bold text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                        Connect App
+                        <span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+<div class="mt-8 pb-4">
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-[10px] font-bold text-text-secondary uppercase tracking-[0.2em]">Activity</h3>
+<button class="material-symbols-outlined text-text-secondary text-sm">history</button>
+</div>
+<div class="space-y-4 px-1">
+<div class="flex items-center justify-between opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm">north_east</span>
+<span class="text-[11px] font-medium">Sent 50 USDC</span>
+</div>
+<span class="text-[10px] font-mono text-text-secondary">2h ago</span>
+</div>
+<div class="flex items-center justify-between opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm">south_west</span>
+<span class="text-[11px] font-medium">Received 100 CTN</span>
+</div>
+<span class="text-[10px] font-mono text-text-secondary">5h ago</span>
+</div>
+</div>
+</div>
+</main>
+<div class="absolute bottom-0 left-0 right-0 p-4 nav-blur border-t border-white/5">
+<div class="flex items-center justify-between bg-card-bg/50 rounded-[28px] p-2 border border-white/10 shadow-xl">
+<div class="pl-4 py-1">
+<div class="flex items-center gap-1.5">
+<span class="text-xs font-medium text-text-secondary">$</span>
+<span class="text-lg font-bold font-display tracking-tight">3,482.20</span>
+</div>
+<div class="flex items-center gap-1 -mt-1">
+<span class="text-[10px] font-bold text-accent">+2.4%</span>
+<span class="text-[9px] text-text-secondary uppercase font-bold tracking-tighter opacity-50">• 3 ASSETS</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2 mr-1">
+<div class="w-6 h-6 rounded-full bg-accent border-2 border-card-bg flex items-center justify-center scale-90">
+<span class="material-symbols-outlined text-[10px] text-bg-main fill-1">hexagon</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-blue-400 border-2 border-card-bg flex items-center justify-center scale-90">
+<span class="material-symbols-outlined text-[10px] text-bg-main fill-1">monetization_on</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-white border-2 border-card-bg flex items-center justify-center scale-90">
+<span class="material-symbols-outlined text-[10px] text-bg-main fill-1">diamond</span>
+</div>
+</div>
+<button class="h-12 px-6 bg-text-primary text-bg-main rounded-[22px] font-bold text-sm flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-lg">
+<span class="material-symbols-outlined text-[20px] fill-1">wallet</span>
+                        Actions
+                    </button>
+</div>
+</div>
+</div>
+<footer class="absolute bottom-1 w-full flex justify-center pointer-events-none">
+<div class="w-16 h-1 bg-white/10 rounded-full"></div>
+</footer>
+</div>
+
+</body></html>

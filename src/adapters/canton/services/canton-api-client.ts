@@ -5,7 +5,7 @@
 
 /// <reference types="vite/client" />
 
-const BACKEND_URL = (import.meta.env.VITE_JUTIS_BACKEND_URL as string) || 'http://localhost:3000';
+const BACKEND_URL = (import.meta.env.VITE_JUTIS_BACKEND_URL as string) || 'https://api.jutis.xyz';
 
 export interface ApiBalance {
   party: string;
